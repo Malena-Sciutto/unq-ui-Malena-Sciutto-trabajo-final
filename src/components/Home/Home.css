@@ -1,0 +1,11 @@
+.home-dialog{
+    padding: 60px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.boton-jugar {
+    background-color: darkseagreen;
+}
