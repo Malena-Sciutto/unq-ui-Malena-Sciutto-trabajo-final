@@ -23,7 +23,7 @@ function Juego(){
     const tamano = location.state?.tamano;
 
     useEffect(() => {
-        const fichasIniciales = ListaFichas.slice(0, tamano);
+        const fichasIniciales = ListaFichas.slice(0, (tamano * tamano) / 2);
         const fichasMezcladas = mezclarFichas(fichasIniciales.concat(fichasIniciales));
         setFichas(fichasMezcladas.map((ficha, i) => ({
             ...ficha,
@@ -55,8 +55,16 @@ function Juego(){
         }
     }
 
+    const tableroStyle = {
+        display: 'grid',
+        gridTemplateColumns: `repeat(${tamano}, 1fr)`,
+        gap: '10px',
+        maxWidth: '600px',
+        width: '100%'
+    };
+
     return (
-        <div className="tablero">
+        <div  style={tableroStyle}>
             {fichas.map((ficha, index) => (
                 <Ficha ficha={ficha} key={index} voltearFicha={voltearFicha} volteando={volteando}/>
             ))}

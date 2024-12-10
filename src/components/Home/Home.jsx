@@ -8,8 +8,8 @@ function Home(){
             <h2>UNQ-UI Memotest!</h2>
             <div className='container'>
                 <div className='jugar'>JUGAR</div>
-                <button className='boton-jugar' onClick={() => navigate('/juego', {state: {tamano: 8}})}>4x4</button>
-                <button className='boton-jugar' onClick={() => navigate('/juego', {state: {tamano: 18}})}>6x6</button>
+                <button className='boton-jugar' onClick={() => navigate('/juego', {state: {tamano: 4}})}>4x4</button>
+                <button className='boton-jugar' onClick={() => navigate('/juego', {state: {tamano: 6}})}>6x6</button>
             </div>
         </div>
     )
