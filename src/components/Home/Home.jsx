@@ -4,9 +4,13 @@ import './Home.css'
 function Home(){
     const navigate = useNavigate()
     return (
-        <div className="home-dialog">
+        <div className="card">
             <h2>UNQ-UI Memotest!</h2>
-            <button className='boton-jugar' onClick={() => navigate('/juego')}>JUGAR</button>
+            <div className='container'>
+                <div className='jugar'>JUGAR</div>
+                <button className='boton-jugar' onClick={() => navigate('/juego', {state: {tamano: 8}})}>4x4</button>
+                <button className='boton-jugar' onClick={() => navigate('/juego', {state: {tamano: 18}})}>6x6</button>
+            </div>
         </div>
     )
 } 
