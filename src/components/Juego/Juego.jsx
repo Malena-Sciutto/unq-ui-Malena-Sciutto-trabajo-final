@@ -14,13 +14,10 @@ const mezclarFichas = (fichas) => {
     return fichasDesordenadas;
 }
 
-function Juego(){
+export function Juego ({tamano, revisarTriunfo, pasarTurno}) {
     const [fichas, setFichas] = useState([]);
     const [fichaVolteada, setFichaVolteada] = useState(null);
     const [volteando, setVolteando] = useState(false);
-    const navigate = useNavigate();
-    const location = useLocation();
-    const tamano = location.state?.tamano;
 
     useEffect(() => {
         const fichasIniciales = ListaFichas.slice(0, (tamano * tamano) / 2);
@@ -40,9 +37,7 @@ function Juego(){
             setFichaVolteada(ficha);
         } else if (fichaVolteada.nombre === ficha.nombre) {
             setFichaVolteada(null);
-            if (fichasActualizadas.every((f) => f.flipped)){
-                setTimeout(() => navigate('/fin'), 1000)
-            }
+            revisarTriunfo(fichasActualizadas)
         } else {
             setVolteando(true);
             setTimeout(() => {
@@ -52,6 +47,7 @@ function Juego(){
                 setFichas(fichasActualizadas);
                 setVolteando(false);
             }, 1000);
+            pasarTurno();
         }
     }
 
@@ -64,12 +60,10 @@ function Juego(){
     };
 
     return (
-        <div  style={tableroStyle}>
+        <div style={tableroStyle}>
             {fichas.map((ficha, index) => (
                 <Ficha ficha={ficha} key={index} voltearFicha={voltearFicha} volteando={volteando}/>
             ))}
         </div>
     )
 }
-
-export default Juego;

@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import './fin.css'
 
-export default function Fin(){
+export default function FinIndividual(){
     const navigate = useNavigate();
 
     return (

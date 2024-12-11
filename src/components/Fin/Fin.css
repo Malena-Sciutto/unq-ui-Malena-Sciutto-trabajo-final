@@ -5,3 +5,22 @@
     flex-direction: column;
     color: black;
 }
+
+.resultado {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: 1rem;
+}
+
+h3, p, h4 {
+    margin-block-start: 0px;
+    margin-block-end: 4px;
+}
+
+.puntaje-jugador {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}

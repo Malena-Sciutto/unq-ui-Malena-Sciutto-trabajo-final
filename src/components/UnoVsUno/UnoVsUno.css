@@ -1,0 +1,29 @@
+.container-1vs1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.puntaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.puntos {
+    font-size: 100px;
+    background-color: white;
+    width: 11vw;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.jugador {
+    font-size: 25px;
+    padding-top: 4px;
+    font-weight: bold;
+}

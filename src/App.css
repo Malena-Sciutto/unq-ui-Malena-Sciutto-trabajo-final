@@ -20,3 +20,9 @@
 .boton-jugar {
   background-color: darkseagreen;
 }
+
+.container-botones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
