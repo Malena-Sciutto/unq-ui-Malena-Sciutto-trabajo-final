@@ -55,7 +55,7 @@ export function Juego ({tamano, revisarTriunfo, pasarTurno}) {
         display: 'grid',
         gridTemplateColumns: `repeat(${tamano}, 1fr)`,
         gap: '10px',
-        maxWidth: '600px',
+        maxWidth: '60vw',
         width: '100%'
     };
 

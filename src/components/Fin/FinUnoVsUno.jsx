@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import './Fin.css'
 
 export default function FinUnoVsUno(){
     const navigate = useNavigate();
